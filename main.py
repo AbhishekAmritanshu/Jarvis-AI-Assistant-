@@ -49,7 +49,14 @@ def speak(audio):
 
   if __name__== "__main__":
 
-    speak("Abhishek is a good boy")
-takeCommand()
+    wishMe()
+    while True:
+     query = takeCommand().lower()
+  if 'wikipedia' in Query:
+    speak('searching wekipedia...', "")
+    results = wikipedia.summary(query, sentences=2)
+    speak("according to wikipedia")
+    speak(results)
+
 
 
